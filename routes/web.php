@@ -21,9 +21,9 @@ Route::get('/', function () { return Inertia::render('Welcome', [ 'videos' => Vi
 Route::get('/add-video', function () {return Inertia::render('AddVideo'); })->name('addVideo');
 Route::get('/delete-video', function () { return Inertia::render('DeleteVideo', [ 'videos' => Video::all() ]); })->name('deleteVideo');
 
-Route::get('/videos/{id}', [\App\Http\Controllers\VideosController::class, 'show'])->name('videos.show');
-Route::post('/videos', [\App\Http\Controllers\VideosController::class, 'store'])->name('videos.store');
-Route::delete('/videos/{id}', [\App\Http\Controllers\VideosController::class, 'destroy'])->name('videos.destroy');
+Route::get('/vid/{id}', [\App\Http\Controllers\VideosController::class, 'show'])->name('videos.show');
+Route::post('/vid', [\App\Http\Controllers\VideosController::class, 'store'])->name('videos.store');
+Route::delete('/vid/{id}', [\App\Http\Controllers\VideosController::class, 'destroy'])->name('videos.destroy');
 
 
 // Route::get('/dashboard', function () {

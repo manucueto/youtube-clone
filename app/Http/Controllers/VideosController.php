@@ -24,7 +24,7 @@ class VideosController extends Controller
 
         $image_file = $request->file('image');
         $request->validate([
-            'image' => 'required|mimes:jpg,jpeg,png|max:2048',
+            'image' => 'required|mimes:jpg,jpeg,png',
             'video' => 'required|mimes:mp4'
         ]);
         $video_file = $request->file('video');
@@ -43,7 +43,7 @@ class VideosController extends Controller
         $video->video = $vidPath . $videoName;
         $video->thumbnail = $thumbPath . $imageName;
         $video->user = 'John Weeks Dev';
-        $video->views = rand(10,100) . 'k views - ' . rand(1,6) . ' days ago';
+        $video->views = rand(10,999) . 'k';
 
         $image_file->move(public_path() . $thumbPath, $imageName);
         $video_file->move(public_path() . $vidPath, $videoName);
