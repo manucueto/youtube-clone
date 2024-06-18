@@ -92,41 +92,13 @@ const isNavOverlay = () => {
                     <MagnifyIcon class="mx-6" fillColor="#FFFFFF" :size="23" />
                 </div>
             </div>
-            <div class="hidden sm:flex sm:items-center sm:ms-6 z-10">
-                <div>
-                    <div class="ms-3 relative hover:opacity-95">
-                        <Dropdown align="right" width="48">
-                            <template #trigger>
-                                <span
-                                    class="inline-flex w-full h-full rounded-md"
-                                >
-                                    <button
-                                        type="button"
-                                        class="flex items-center px-3 py-2 border border-transparent text-sm text-center leading-4 font-extrabold text-gray-800 bg-white hover:text-gray-500 focus:outline-none transition ease-in-out duration-150 text-neutral-content rounded-full w-10 h-10"
-                                    >
-                                        <span class="w-full"> GH </span>
-                                    </button>
-                                </span>
-                            </template>
-
-                            <template #content>
-                                <DropdownLink :href="route('profile.edit')">
-                                    Perfil
-                                </DropdownLink>
-                                <DropdownLink
-                                    :href="route('logout')"
-                                    method="post"
-                                    as="button"
-                                >
-                                    Salir
-                                </DropdownLink>
-                            </template>
-                        </Dropdown>
-                    </div>
-
+            <div>
+                <div
+                    class="flex justify-center content-center w-full h-full gap-4 px-4"
+                >
                     <button
                         type="button"
-                        class="relative rounded-full p-1 text-gray-200 hover:bg-white/10 hover:text-gray-100 focus:outline-none"
+                        class="relative rounded-full p-2 text-gray-200 bg-white/5 hover:bg-white/10 hover:text-gray-100 focus:outline-none"
                     >
                         <svg
                             class="h-8 w-8"
@@ -142,6 +114,12 @@ const isNavOverlay = () => {
                                 d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
                             />
                         </svg>
+                    </button>
+                    <button
+                        type="button"
+                        class="relative rounded-full px-3 text-gray-200 bg-white/5 hover:bg-white/10 hover:text-gray-100 focus:outline-none"
+                    >
+                        MC
                     </button>
                 </div>
                 <!-- Settings Dropdown -->

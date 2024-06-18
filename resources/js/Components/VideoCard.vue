@@ -53,7 +53,7 @@
                                 {{ user.slice(0, 2).toUpperCase() }}</span
                             > -->
                             <img
-                                class="rounded-full m-1.5 mt-2 flex items-baseline w-8 h-8"
+                                class="rounded-full m-1.5 mt-2 flex items-baseline w-6 h-6"
                                 :src="image || ''"
                             />
                         </div>
